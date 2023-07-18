@@ -24,3 +24,11 @@ hs_err_pid*
 replay_pid*
 /demo/.mvn/wrapper/*.jar
 /demo/.mvn/wrapper/*.jar
+/demo/.mvn/wrapper/maven-wrapper.properties
+/demo/.mvn/wrapper/maven-wrapper.jar
+/.idea
+/*.cmd
+/.mvn/wrapper/maven-wrapper.properties
+/*.md
+/mvnw
+/target/classes
