@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -13,9 +14,10 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
+@RequestMapping("/products")
 public class ProductController {
 
-    @GetMapping("/products")
+    @GetMapping("/get-all")
     ResponseEntity<List<ProductResponseDto>> getAll(){
         List<ProductResponseDto> productList = new ArrayList<>();
         productList.add(new ProductResponseDto(1, "Java backend", 40, "https://cdn.codegym.vn/wp-content/uploads/2022/06/trang-chu-2-7.jpg"));
@@ -25,4 +27,6 @@ public class ProductController {
 
         return new ResponseEntity<>(productList, HttpStatus.OK);
     }
+
+
 }
